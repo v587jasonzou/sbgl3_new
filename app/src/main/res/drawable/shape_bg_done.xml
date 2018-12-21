@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- listView实现圆角 -->
+    <gradient
+        android:angle="0"
+        android:endColor="#CBFDDF"
+        android:startColor="#CBFDDF" />
+  
+    <stroke  
+        android:width="1px"
+        android:color="#20C033" />
+
+
+</shape>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#f6f6f6"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="621px"
+        android:layout_height="220px"
+        android:contentDescription="@string/logo"
+        android:src="@mipmap/logo_icon"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80px"
+        android:text="RFID模块启动中，请稍等..."
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:textSize="64px"
+        android:layout_gravity="center"/>
+
+</com.zhy.autolayout.AutoLinearLayout>

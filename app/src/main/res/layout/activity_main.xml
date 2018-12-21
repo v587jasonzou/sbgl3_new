@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/page_bg"
+    android:orientation="vertical">
+
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/colorPrimary"
+    app:contentPaddingLeft="35dp"
+    app:contentPaddingRight="32dp"
+    app:contentPaddingBottom="10dp"
+    app:contentPaddingTop="20dp"
+    app:cardElevation="10dp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_22"
+            android:textColor="@color/white"
+            android:layout_marginTop="30dp"
+            android:text="管理员"
+            android:id="@+id/tvUserRole"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="30dp"
+            android:gravity="center_vertical">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/user_header_icon"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_20"
+                android:textColor="@color/white"
+                android:text="何云刚"
+                android:id="@+id/tvUsername"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:id="@+id/tvEmpId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_16"
+                android:textColor="@color/white"
+                android:text="50003"
+                android:layout_marginLeft="10dp"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:gravity="right">
+                <TextView
+                    android:id="@+id/tvChangeUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_12"
+                    android:text="切换账号"
+                    android:gravity="right"
+                    android:drawableLeft="@mipmap/exchange_icon"
+                    android:drawablePadding="5dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="36dp"
+        android:id="@+id/srRefresh">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rlMenus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

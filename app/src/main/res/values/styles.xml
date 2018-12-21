@@ -1,0 +1,35 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="AppTheme.ActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="actionMenuTextColor">@color/white</item>
+    </style>
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="popwin_anim_style">
+        <item name="android:windowEnterAnimation">@anim/menushow</item>
+        <item name="android:windowExitAnimation">@anim/menuhide</item>
+    </style>
+
+    <declare-styleable name="ColorTextView">
+        <attr name="ctvText" format="string" />
+        <attr name="ctvBackground" format="color"/>
+        <attr name="ctvTextSize" format="dimension"/>
+        <attr name="ctvTextColor" format="color"/>
+        <attr name="ctvCornerSize" format="integer"/>
+    </declare-styleable>
+    <style name="FullScreenStyle">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="anim_menu_bottombar">
+        <item name="android:windowEnterAnimation">@anim/down_menu_show</item>
+        <item name="android:windowExitAnimation">@anim/down_menu_hide</item>
+    </style>
+</resources>

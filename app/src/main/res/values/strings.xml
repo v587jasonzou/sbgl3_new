@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="EquipCode">设备编码</string>
+    <string name="EquipName">设备名称</string>
+    <string name="EquipUsePlace">设置地点</string>
+    <string name="EquipModel">型号规格</string>
+    <string name="EquipWorkUser">使用人</string>
+</resources>

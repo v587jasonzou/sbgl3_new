@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardElevation="4dp"
+        app:contentPaddingBottom="12dp"
+        app:contentPaddingLeft="18dp"
+        app:contentPaddingRight="18dp"
+        app:contentPaddingTop="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/cbCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:background="@drawable/checkbox_bg"/>
+            <ImageView
+                android:id="@+id/ivConfirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/confirm_icon"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/tvSeq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:textSize="@dimen/text_size_16"
+                android:textColor="@color/title_text_color"
+                android:text=""/>
+
+           <TextView
+               android:id="@+id/tvInfo"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:textSize="@dimen/text_size_14"
+               android:textColor="@color/equip_record_text"
+               android:layout_weight="1"
+               android:paddingLeft="8dp"
+               android:text=""/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/warning_icon"
+                android:layout_marginLeft="10dp"/>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

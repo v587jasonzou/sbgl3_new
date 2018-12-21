@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/menu_tp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:paddingTop="20dp"
+        android:theme="@style/AppTheme.ActionBar"
+        app:navigationIcon="@mipmap/left_arrows_white"
+        app:title="工单处理"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@color/white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/ivTriangle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="15dp"
+                    android:elevation="5dp"
+                    android:visibility="gone"
+                    android:src="@drawable/triangle_blue_icon"/>
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="4dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardElevation="4dp"
+                    app:contentPaddingBottom="12dp"
+                    app:contentPaddingLeft="18dp"
+                    app:contentPaddingRight="18dp"
+                    app:contentPaddingTop="12dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="作业工单"
+                                android:textColor="@color/title2_text_color"
+                                android:textSize="@dimen/text_size_12" />
+
+                            <TextView
+                                android:id="@+id/tvNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/confirm_btn_bg"
+                                android:paddingBottom="3dp"
+                                android:paddingLeft="12dp"
+                                android:paddingRight="12dp"
+                                android:paddingTop="3dp"
+                                android:textColor="@color/white"
+                                android:textSize="8sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvOrderContent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:text=""
+                            android:textColor="@color/title2_text_color"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="工艺标准"
+                            android:textColor="@color/title2_text_color"
+                            android:textSize="@dimen/text_size_12" />
+
+                        <TextView
+                            android:id="@+id/tvProccess"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:text=""
+                            android:textColor="@color/title2_text_color"
+                            android:textSize="@dimen/text_size_14" />
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="12dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="4dp"
+                app:contentPaddingBottom="12dp"
+                app:contentPaddingLeft="18dp"
+                app:contentPaddingRight="18dp"
+                app:contentPaddingTop="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="工单提交"
+                        android:textColor="@color/title2_text_color"
+                        android:textSize="@dimen/text_size_12" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="7dp">
+
+                        <EditText
+                            android:id="@+id/etSuggess"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@null" />
+
+                        <ImageView
+                            android:id="@+id/ivDelete"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/grey_delete_icon" />
+
+                        <ImageView
+                            android:id="@+id/ivHistory"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:src="@mipmap/history_icon" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:background="@color/deep_gray" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rlUnit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="15dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="4dp"
+                app:contentPaddingBottom="12dp"
+                app:contentPaddingLeft="18dp"
+                app:contentPaddingRight="18dp"
+                app:contentPaddingTop="12dp">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rlImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cvChangeServer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="20dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="4dp"
+                app:contentPaddingBottom="16dp"
+                app:contentPaddingLeft="16dp"
+                app:contentPaddingRight="16dp"
+                app:contentPaddingTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="辅修人员"
+                        android:textColor="@color/title2_text_color"
+                        android:textSize="@dimen/text_size_12" />
+
+                    <TextView
+                        android:id="@+id/tvFixUser"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="选择辅修人员"
+                        android:maxLines="2"
+                        android:textColor="@color/title_text_color"
+                        android:textSize="@dimen/text_size_14"
+                        android:gravity="end"
+                        android:paddingRight="10dp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/arrow_right_icon" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+    <android.support.v7.widget.CardView
+        android:id="@+id/cvConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp"
+        app:contentPaddingBottom="12dp"
+        app:contentPaddingLeft="18dp"
+        app:contentPaddingRight="18dp"
+        app:contentPaddingTop="12dp"
+        app:cardBackgroundColor="@color/white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <TextView
+                android:id="@+id/tvStuff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="查看物料"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/colorPrimaryLight"
+                android:paddingLeft="10dp"/>
+            <TextView
+                android:id="@+id/tvStuffNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="(3/1)"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/colorPrimaryLight"
+                android:paddingLeft="5dp"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end">
+                <TextView
+                    android:id="@+id/tvConfirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/confirm_btn_bg"
+                    android:text="确认"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:paddingLeft="20dp"
+                    android:textSize="@dimen/text_size_16"
+                    android:paddingRight="20dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

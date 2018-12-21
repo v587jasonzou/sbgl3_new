@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/root_layout">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/menu_tp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:paddingTop="20dp"
+        android:theme="@style/AppTheme.ActionBar"
+        app:navigationIcon="@mipmap/left_arrows_white"
+        app:title="物料信息"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@color/white" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fadingEdge="vertical"
+        android:scrollbarAlwaysDrawVerticalTrack="false"
+        android:scrollbars="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <com.jess.arms.widget.MySwipeMenuListView
+                android:id="@+id/rlStuffs"
+                android:paddingTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"/>
+            <TextView
+                android:id="@+id/tvAddStuff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="添加物料信息"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/colorPrimaryLight"
+                android:background="@drawable/stuff_footer_bg"
+                android:drawableRight="@mipmap/add_blue_icon"
+                android:drawablePadding="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="15dp"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f6f6f6"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/menu_tp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
+        android:paddingTop="20dp"
+        android:theme="@style/AppTheme.ActionBar"
+        app:navigationIcon="@mipmap/left_arrows_white"
+        app:title="设备信息详情"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@color/white" />
+
+    <com.jess.arms.widget.autolayout.AutoScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.zhy.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48px"
+                android:layout_marginRight="48px"
+                android:layout_marginTop="49px"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/colorPrimaryLight"
+                app:cardElevation="4dp">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="36px"
+                    android:paddingLeft="48px"
+                    android:paddingRight="48px"
+                    android:paddingTop="36px">
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvEquipName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/app_name"
+                            android:textColor="@color/white"
+                            android:textSize="54px" />
+
+                        <TextView
+                            android:id="@+id/tvEquipCode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="16px"
+                            android:text="2121212"
+                            android:textColor="@color/white"
+                            android:textSize="42px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivPhoto"
+                        android:layout_width="100px"
+                        android:layout_height="87px"
+                        android:src="@mipmap/photo_icon_white" />
+                </com.zhy.autolayout.AutoLinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48px"
+                android:layout_marginRight="48px"
+                android:layout_marginTop="36px"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="4dp">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingBottom="36px"
+                    android:paddingLeft="48px"
+                    android:paddingRight="48px"
+                    android:paddingTop="36px">
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.zhy.autolayout.AutoLinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawableLeft="@mipmap/totalweight_icon"
+                                android:drawablePadding="10dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/equip_info_weight"
+                                android:textColor="@color/title2_text_color"
+                                android:textSize="36px" />
+
+                            <TextView
+                                android:id="@+id/tvWeight"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/title_text_color"
+                                android:textSize="42px" />
+                        </com.zhy.autolayout.AutoLinearLayout>
+
+                        <com.zhy.autolayout.AutoLinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawableLeft="@mipmap/equip_model_icon"
+                                android:drawablePadding="10dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/equip_info_model"
+                                android:textColor="@color/title2_text_color"
+                                android:textSize="36px" />
+
+                            <TextView
+                                android:id="@+id/tvEquipModel"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.5"
+                                android:textColor="@color/title_text_color"
+                                android:textSize="42px" />
+                        </com.zhy.autolayout.AutoLinearLayout>
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24px"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.zhy.autolayout.AutoLinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawableLeft="@mipmap/equip_total_power_icon"
+                                android:drawablePadding="10dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/equip_info_total_power"
+                                android:textColor="@color/title2_text_color"
+                                android:textSize="36px" />
+
+                            <TextView
+                                android:id="@+id/tvTotalPower"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textColor="@color/title_text_color"
+                                android:textSize="42px" />
+                        </com.zhy.autolayout.AutoLinearLayout>
+
+                        <com.zhy.autolayout.AutoLinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawableLeft="@mipmap/equip_specification_icon"
+                                android:drawablePadding="10dp"
+                                android:gravity="center_vertical"
+                                android:text="@string/equip_info_specification"
+                                android:textColor="@color/title2_text_color"
+                                android:textSize="36px" />
+
+                            <TextView
+                                android:id="@+id/tvEquipSpecification"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.5"
+                                android:textColor="@color/title_text_color"
+                                android:textSize="42px" />
+                        </com.zhy.autolayout.AutoLinearLayout>
+                    </com.zhy.autolayout.AutoLinearLayout>
+                </com.zhy.autolayout.AutoLinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48px"
+                android:layout_marginRight="48px"
+                android:layout_marginTop="36px"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="4dp">
+
+                <com.zhy.autolayout.AutoLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="36px"
+                    android:paddingTop="36px">
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvMechanicalCoefficient"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimaryLight"
+                            android:textSize="60px" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10px"
+                            android:text="@string/equip_info_mechanicalcoefficient"
+                            android:textColor="@color/title2_text_color"
+                            android:textSize="36px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvElectricCoefficient"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorPrimaryLight"
+                            android:textSize="60px" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10px"
+                            android:text="@string/equip_info_electriccoefficient"
+                            android:textColor="@color/title2_text_color"
+                            android:textSize="36px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+
+                    <com.zhy.autolayout.AutoLinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvFixedAssetValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/title_text_color"
+                            android:textSize="60px" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10px"
+                            android:text="@string/equip_info_fixedassetvalue"
+                            android:textColor="@color/title2_text_color"
+                            android:textSize="36px" />
+                    </com.zhy.autolayout.AutoLinearLayout>
+                </com.zhy.autolayout.AutoLinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48px"
+                android:layout_marginRight="48px"
+                android:layout_marginTop="41px"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingBottom="36px"
+                    android:paddingLeft="48px"
+                    android:paddingRight="48px"
+                    android:paddingTop="36px">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/equip_info_useplace"
+                        android:textColor="@color/title2_text_color"
+                        android:textSize="36px" />
+
+                    <TextView
+                        android:id="@+id/tvUsePlace"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:textColor="@color/title_text_color"
+                        android:textSize="42px" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48px"
+                android:layout_marginRight="48px"
+                android:layout_marginTop="41px"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="36px"
+                    android:paddingLeft="48px"
+                    android:paddingRight="48px"
+                    android:paddingTop="36px">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/equip_info_classcode"
+                            android:textColor="@color/title2_text_color"
+                            android:textSize="36px" />
+
+                        <TextView
+                            android:id="@+id/tvClassCode"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:textColor="@color/title_text_color"
+                            android:textSize="42px" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="10px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/equip_info_classname"
+                            android:textColor="@color/title2_text_color"
+                            android:textSize="36px" />
+
+                        <TextView
+                            android:id="@+id/tvClassName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:textColor="@color/title_text_color"
+                            android:textSize="42px" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48px"
+                android:layout_marginRight="48px"
+                android:layout_marginTop="41px"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="36px"
+                    android:paddingLeft="48px"
+                    android:paddingRight="48px"
+                    android:paddingTop="36px">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/equip_info_mechanicalrepairperson"
+                            android:textColor="@color/title2_text_color"
+                            android:textSize="36px" />
+
+                        <TextView
+                            android:id="@+id/tvMechanicalRepairPerson"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:textColor="@color/title_text_color"
+                            android:textSize="42px" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="10px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/equip_info_electricrepairperson"
+                            android:textColor="@color/title2_text_color"
+                            android:textSize="36px" />
+
+                        <TextView
+                            android:id="@+id/tvElectricRepairPerson"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:textColor="@color/title_text_color"
+                            android:textSize="42px" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="48px"
+                android:layout_marginRight="48px"
+                android:layout_marginTop="41px"
+                android:layout_marginBottom="69px"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="36px"
+                    android:paddingLeft="48px"
+                    android:paddingRight="48px"
+                    android:paddingTop="36px">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/equip_info_buydate"
+                            android:textColor="@color/title2_text_color"
+                            android:textSize="36px" />
+
+                        <TextView
+                            android:id="@+id/tvBuyData"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:textColor="@color/title_text_color"
+                            android:textSize="42px" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="10px">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/equip_info_makefactory"
+                            android:textColor="@color/title2_text_color"
+                            android:textSize="36px" />
+
+                        <TextView
+                            android:id="@+id/tvMakeFactory"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end"
+                            android:textColor="@color/title_text_color"
+                            android:textSize="42px" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </com.zhy.autolayout.AutoLinearLayout>
+    </com.jess.arms.widget.autolayout.AutoScrollView>
+</com.zhy.autolayout.AutoLinearLayout>

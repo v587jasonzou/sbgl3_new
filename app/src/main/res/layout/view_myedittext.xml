@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:paddingLeft="14dp"
+    android:paddingRight="14dp"
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp"
+    android:background="@color/white">
+    <TextView
+        android:id="@+id/tvChoose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="全部"
+        android:textSize="@dimen/text_size_14"
+        android:textColor="#2B2B2B"/>
+    <View
+        android:layout_width="1px"
+        android:layout_height="match_parent"
+        android:background="@color/deep_gray"
+        android:layout_marginLeft="10dp"/>
+    <sbgl3.yunda.widget.ClearEditText
+        android:id="@+id/etMySearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@null"
+        android:hint="搜索设备编码"
+        android:textSize="12sp"
+        />
+</LinearLayout>

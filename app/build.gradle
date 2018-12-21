@@ -1,0 +1,84 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+
+def AAVersion = '4.1.0'
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "sbgl3.yunda.sb_project_new"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    defaultConfig {
+        multiDexEnabled true
+        ndk {
+            abiFilters 'armeabi','armeabi-v7a'
+        }
+    }
+    dexOptions {
+        jumboMode true
+        javaMaxHeapSize "4g"
+        preDexLibraries = false
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {//就算您使用 AndroidStuido v3.0, 也需要配置以下参数
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //    implementation 'com.android.support:appcompat-v7:27.1.1'
+    //    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    //    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //    implementation 'me.jessyan:arms:2.4.1'
+    implementation project(':arms')
+    testImplementation rootProject.ext.dependencies["junit"]
+    implementation rootProject.ext.dependencies["gson"]
+    implementation rootProject.ext.dependencies["autolayout"]
+    implementation rootProject.ext.dependencies["butterknife"]
+//    implementation rootProject.ext.dependencies["eventbus"]
+    implementation rootProject.ext.dependencies["progressmanager"]
+    implementation rootProject.ext.dependencies["retrofit-converter-gson"]
+    implementation rootProject.ext.dependencies["retrofit-adapter-rxjava2"]
+    implementation rootProject.ext.dependencies["retrofit-converter-scalars"]
+    implementation rootProject.ext.dependencies["retrofit-logging-interceptor"]
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+    //Butterknife 插件,很多人因为没加这个而报错,切记!!!
+    annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
+    //依赖插件, annotationProcessor 是 AndroidStudio 自带并用来替换 APT
+    implementation files('libs/android-async-http-1.4.6.jar')
+    implementation files('libs/core-3.0.0.jar')
+    implementation files('libs/dcdz-common-toolkits-1.0.0.jar')
+    implementation files('libs/ddpush-1.0.02.jar')
+    implementation files('libs/universal-image-loader-1.9.3.jar')
+    implementation 'com.speedata:deivice:1.5'
+    implementation 'com.speedata:libuhf:5.9.9'
+    implementation 'com.android.support:multidex:1.0.0'
+    implementation rootProject.ext.dependencies["cardview-v7"]
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5.1'
+    implementation 'com.lzy.widget:imagepicker:0.6.1'
+    implementation 'com.github.1em0nsOft:LemonHello4Android:1.0.1'
+    implementation 'com.github.1em0nsOft:LemonBubble4Android:1.0.13'
+    implementation 'com.liulishuo.magicprogresswidget:library:1.1.1'
+    api 'cn.dreamtobe.percentsmoothhandler:library:0.1.1'
+    implementation 'com.bm.photoview:library:1.3.6'
+}
